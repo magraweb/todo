@@ -31,22 +31,17 @@ This project demonstrates full-stack development fundamentals — clean API desi
 
 ## 🧩 Directory Structure
 
-todo/
-├── backend/ # Express.js server
-│ ├── models/ # Mongoose schemas
-│ ├── routes/ # API routes
-│ └── server.js # App entry point
-│
-├── frontend/ # React client (Vite)
-│ ├── src/
-│ │ ├── components/ # Reusable UI components
-│ │ ├── pages/ # App pages
-│ │ └── App.jsx # Main React component
-│ └── vite.config.js
-│
-├── .gitignore
-├── README.md
-└── package.json
+ todo/
+├── frontend/        # React app (Vite)
+│   ├── src/
+│   ├── public/
+│   └── vite.config.js
+├── backend/         # API server
+│   ├── routes/
+│   ├── controllers/
+│   └── server.js
+└── README.md
+
 
 <img width="1043" height="593" alt="image" src="https://github.com/user-attachments/assets/cfaf65b8-c7cc-4083-89bf-508875061f6c" />
 
