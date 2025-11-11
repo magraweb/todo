@@ -1,33 +1,91 @@
-# 📝 Full Stack TODO App
+🖥️ Backend Setup
+cd backend
+npm install
 
-A simple and elegant full-stack TODO application built with **React**, **Node.js**, and **MongoDB**.  
-This project demonstrates full-stack development fundamentals — clean API design, modern React UI, and persistent task management.
+Create a .env file in /backend
+MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/todo
+PORT=5000
 
----
+Start the server
+npm start
 
-## 🚀 Tech Stack
 
-| Layer | Technology |
-|-------|-------------|
-| **Frontend** | React.js (Vite) |
-| **Backend** | Node.js + Express.js |
-| **Database** | MongoDB (Mongoose ODM) |
-| **Styling** | CSS (Modern, clean design) |
-| **API** | RESTful JSON-based API |
+Backend runs at:
+👉 http://localhost:5000
 
----
+💻 Frontend Setup
+cd frontend
+npm install
 
-## 🎯 Features
+Start the Vite development server
+npm run dev
 
-- ✅ View all TODO items  
-- ➕ Create a new TODO with title and description  
-- ✏️ Edit existing TODOs  
-- 🔁 Toggle “Done” status  
-- ❌ Delete TODO items  
-- 💾 Persistent storage with MongoDB  
-- ⚡ Real-time UI updates and clean transitions  
 
----
+Frontend runs at:
+👉 http://localhost:5173
 
-## 🧩 Directory Structure
+🔗 API Endpoints
+Method	Endpoint	Description
+GET	/api/todos	Retrieve all TODOs
+POST	/api/todos	Create a new TODO
+PUT	/api/todos/:id	Update TODO title or description
+PATCH	/api/todos/:id/done	Toggle "done" status
+DELETE	/api/todos/:id	Delete a TODO item
 
+Example request:
+
+curl -X POST http://localhost:5000/api/todos \
+-H "Content-Type: application/json" \
+-d '{"title":"Buy milk","description":"Remember to get low fat"}'
+
+📁 Project Structure
+todo/
+├── backend/
+│   ├── src/
+│   │   ├── models/Todo.js
+│   │   ├── controllers/todoController.js
+│   │   ├── routes/todos.js
+│   │   ├── config/db.js
+│   │   └── app.js
+│   ├── .env.example
+│   ├── package.json
+│   └── README.md
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── api/todos.js
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── vite.config.js
+│   ├── package.json
+│   └── README.md
+│
+└── README.md
+
+🎨 UI Highlights
+
+Clean layout with subtle shadows and spacing
+
+Strikethrough + faded text for completed tasks
+
+Smooth hover and transition effects
+
+Error and loading states for a polished UX
+
+🧠 Development Notes
+
+Uses Axios for consistent API calls.
+
+Optimistic UI updates for better user experience (instant toggle feedback).
+
+Graceful error handling and simple validation on both ends.
+
+No authentication — suitable for local or small-scale demos.
+
+🧪 Quick Developer Commands
+Task	Command
+Start backend	cd backend && npm run dev
+Start frontend	cd frontend && npm run dev
+Install dependencies	npm install (in each folder)
+Test API	Use Postman or curl commands
