@@ -29,9 +29,8 @@ This project demonstrates full-stack development fundamentals — clean API desi
 
 ---
 
-## 🧩 Directory Structure
-
- todo/
+📂 Folder Structure
+todo/
 ├── frontend/        # React app (Vite)
 │   ├── src/
 │   ├── public/
